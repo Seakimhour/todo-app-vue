@@ -1,0 +1,24 @@
+@import './base.css';
+
+body {
+  display: flex;
+}
+
+input {
+  width: 200px;
+  padding: 2px;
+  margin: 4px;
+}
+
+#app {
+  display: flex;
+  flex: 1 1 0%;
+  background-color: aliceblue;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
