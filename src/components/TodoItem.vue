@@ -12,15 +12,16 @@ export default {
   },
   data() {
     return {
-      isEditing: false
+      isEditing: false,
+      currentValue: this.todo,
     };
   },
   methods: {
     save() {
-      this.$emit('update', this.index, this.todo);
+      this.$emit("update", this.index, this.currentValue);
       this.isEditing = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -33,7 +34,7 @@ export default {
     </div>
   </div>
   <div v-else>
-    <input v-model="todo" type="text" placeholder="Type something..." />
+    <input v-model="currentValue" type="text" placeholder="Type something..." />
     <button @click="save()">Save</button>
   </div>
 </template>

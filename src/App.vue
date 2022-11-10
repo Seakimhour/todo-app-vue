@@ -13,27 +13,27 @@ export default {
   },
   methods: {
     getTodoList() {
-      return localStorage.getItem('todoList').split('///');
+      return localStorage.getItem("todoList").split("///");
     },
     add() {
       if (this.newTodo) {
         this.todoList.push(this.newTodo);
-        localStorage.setItem('todoList', this.todoList.join('///'));
+        localStorage.setItem("todoList", this.todoList.join("///"));
         this.newTodo = "";
       }
     },
     update(index, value) {
       this.todoList[index] = value;
-      localStorage.setItem('todoList', this.todoList.join('///'));
+      localStorage.setItem("todoList", this.todoList.join("///"));
     },
     destroy(index) {
       this.todoList.splice(index, 1);
-      localStorage.setItem('todoList', this.todoList.join('///'));
+      localStorage.setItem("todoList", this.todoList.join("///"));
     },
   },
   mounted() {
     this.todoList = this.getTodoList();
-  }
+  },
 };
 </script>
 
